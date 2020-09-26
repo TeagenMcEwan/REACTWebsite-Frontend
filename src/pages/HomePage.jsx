@@ -11,18 +11,16 @@ function HomePage() {
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}projects`)
         .then((results) => {
-            return results.json();
+        return results.json();
         })
         .then((data) => {
-            setProjectList(data);
+        setProjectList(data);
         });
         // setProjectList(allProjects);
     }, []);
 
 
     //template
-
-
 
 
     return (
