@@ -20,12 +20,14 @@ function HomePage() {
     }, []);
 
 
+
     //template
 
-
     return (
+        // <div id="company-tile">
+        //     <h1> waSportsStars</h1>
         <div id="project-list">
-        {projectList.map((projectData, key) => {
+            {projectList.map((projectData, key) => {
         return <ProjectCard key={key} projectData={projectData} />;
         })}
         </div>
@@ -34,4 +36,4 @@ function HomePage() {
 
 
 
-export default HomePage;
+export default HomePage; 
