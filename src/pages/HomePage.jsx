@@ -1,39 +1,37 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { allProjects } from "../data";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
-
 function HomePage() {
-    //variables
-    const [projectList, setProjectList] = useState([]);
+  //variables
+  const [projectList, setProjectList] = useState([]);
 
-    //methods
-    useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}projects`)
-        .then((results) => {
+  //methods
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}projects`)
+      .then((results) => {
         return results.json();
-        })
-        .then((data) => {
+      })
+      .then((data) => {
         setProjectList(data);
-        });
-        // setProjectList(allProjects);
-    }, []);
+      });
+    // setProjectList(allProjects);
+  }, []);
 
+  //template
 
-
-    //template
-
-    return (
-        // <div id="company-tile">
-        //     <h1> waSportsStars</h1>
-        <div id="project-list">
-            {projectList.map((projectData, key) => {
-        return <ProjectCard key={key} projectData={projectData} />;
+  return (
+    <>
+      <div id="tile">
+        <h1>waSportsStars</h1>
+      </div>
+      <div id="project-list">
+        {projectList.map((projectData, key) => {
+          return <ProjectCard key={key} projectData={projectData} />;
         })}
-        </div>
-    );
+      </div>
+    </>
+  );
 }
 
-
-
-export default HomePage; 
+export default HomePage;

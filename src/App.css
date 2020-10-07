@@ -37,13 +37,28 @@
   }
 } */
 
+body {
+  background: black;
+  color: white;
+  padding: 50px;
+}
 
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 30px;
+  row-gap: 30px;
   background-color: black;
- }
+  /* text: white; */
 
- 
+  #form {
+    margin: 50px;
+    padding: 50px;
+  }
+}
+
+Nav {
+  margin: 50px;
+  font: white;
+  background: #f2377d;
+}
