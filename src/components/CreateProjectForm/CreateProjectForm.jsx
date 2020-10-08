@@ -7,8 +7,7 @@ function CreateProjectForm() {
     title: "",
     description: "",
     goal: "",
-    image:
-      "https://cdn.vox-cdn.com/thumbor/z60rSxAiFBIpiEvgtEfmOBYD6h4=/0x0:600x378/1200x800/filters:focal(252x141:348x237)/cdn.vox-cdn.com/uploads/chorus_image/image/64360364/695293459.0.jpg",
+    image: "",
     is_open: "true",
     date_created: "2020-09-09T20:31:00Z",
   });
@@ -41,7 +40,6 @@ function CreateProjectForm() {
     if (true) {
       postData()
         .then((response) => {
-          window.localStorage.setItem("token", response.token);
           history.push("/");
           // console.log(response);
         })
@@ -87,7 +85,7 @@ function CreateProjectForm() {
       <div>
         <label htmlFor="image">Image:</label>
         <input
-          type="image"
+          type="text"
           id="image"
           placeholder="Image"
           onChange={handleChange}
@@ -97,7 +95,7 @@ function CreateProjectForm() {
       <div>
         <label htmlFor="is_open">Project Open:</label>
         <input
-          type="is_open"
+          type="checkbox"
           id="is_open"
           placeholder="is_open"
           onChange={handleChange}

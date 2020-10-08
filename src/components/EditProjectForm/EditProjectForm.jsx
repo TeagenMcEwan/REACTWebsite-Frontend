@@ -37,7 +37,7 @@ function EditProjectForm() {
 
   const postData = async () => {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}projects/${id}`,
+      `${process.env.REACT_APP_API_URL}projects/${id}/`,
       {
         method: "put",
         headers: {
@@ -46,6 +46,10 @@ function EditProjectForm() {
         },
         body: JSON.stringify({
           title: projectData.title,
+          description: projectData.description,
+          goal: projectData.goal,
+          image: projectData.image,
+          is_open: projectData.is_open,
         }),
       }
     );
@@ -57,8 +61,7 @@ function EditProjectForm() {
     if (true) {
       postData()
         .then((response) => {
-          window.localStorage.setItem("token", response.token);
-          history.push("/");
+          history.push(`/project/${id}`);
           // console.log(response);
         })
         .catch((error) => {
@@ -120,7 +123,6 @@ function EditProjectForm() {
           value={projectData.is_open}
         />
       </div>
-
       <button type="submit" onClick={handleSubmit}>
         Save
       </button>

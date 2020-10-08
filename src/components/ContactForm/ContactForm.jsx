@@ -20,29 +20,22 @@ function ContactForm() {
     }));
   };
 
-  const postData = async () => {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_URL}api-token-auth/`,
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
-      }
-    );
-    return response.json();
-  };
+  //   const postData = async () => {
+  //     const response = await fetch(
+  //       `${process.env.REACT_APP_API_URL}api-token-auth/`,
+  //       {
+  //         method: "post",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(credentials),
+  //       }
+  //     );
+  //     return response.json();
+  //   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (credentials.username && credentials.password) {
-      postData().then((response) => {
-        window.localStorage.setItem("token", response.token);
-        history.push("/");
-        // console.log(response);
-      });
-    }
   };
 
   //template

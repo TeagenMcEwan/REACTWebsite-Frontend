@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
+import PledgeForm from "../components/PledgeForm/PledgeForm";
 // import image from "../image.png";
 // import Logo from "./public/Logo.png";
 // import { oneProject } from "../data";
@@ -56,6 +57,9 @@ function ProjectPage() {
       {/* <button type="edit" onClick={handleSubmit}>
         Edit{" "}
       </button> */}
+
+      <PledgeForm projectId={id} />
+      <hr />
       <Link to={`/editproject/${id}`}>Edit</Link>
       <button type="delete" onClick={deleteData}>
         Delete

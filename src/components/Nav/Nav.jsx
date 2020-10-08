@@ -29,7 +29,6 @@ function Nav(props) {
       </div>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
-      <Link to="/project">Project</Link>
       <Link to="/contact">Contact</Link>
       <Link to="/CreateProjectForm">Create Project</Link>
     </nav>
