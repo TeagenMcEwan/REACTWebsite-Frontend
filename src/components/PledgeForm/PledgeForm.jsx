@@ -30,7 +30,7 @@ function PledgeForm({ projectId }) {
       },
       body: JSON.stringify(pledge),
     });
-    return response.json();
+    return { ok: response.ok, ...(await response.json()) };
   };
 
   const handleSubmit = (e) => {
@@ -38,8 +38,12 @@ function PledgeForm({ projectId }) {
     postData()
       .then((response) => {
         // history.push(`/project/${projectId}`);
-        alert("Thanks for your pledge!");
-        window.location.reload();
+        if (response.ok) {
+          alert("Thanks for your pledge!");
+          window.location.reload();
+        } else {
+          alert("It didn't work");
+        }
         // console.log(response);
       })
       .catch((error) => {
