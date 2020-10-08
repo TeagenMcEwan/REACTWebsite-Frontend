@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
+import "./Nav.css";
 
 function Nav(props) {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -19,18 +20,16 @@ function Nav(props) {
   const { image } = props;
   return (
     <nav>
-      <div className="Menu">
-        {!loggedIn ? (
-          // <Link className="Login">Login</Link>
-          <Link to="/login">Login</Link>
-        ) : (
-          <Link onClick={logout}>Logout</Link>
-        )}
-      </div>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/contact">Contact</Link>
       <Link to="/CreateProjectForm">Create Project</Link>
+      {!loggedIn ? (
+        // <Link className="Login">Login</Link>
+        <Link to="/login">Login</Link>
+      ) : (
+        <Link onClick={logout}>Logout</Link>
+      )}
     </nav>
   );
 }

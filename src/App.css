@@ -43,6 +43,12 @@ body {
   /* padding: 50px; */
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -56,15 +62,8 @@ body {
   padding: 50px;
 }
 
-Nav {
-  /* margin: 50px; */
-  font: white;
-  background: #f2377d;
-  justify-content: space-between;
-  text-align: center;
-}
-
 footer {
+  flex: 0;
   margin: 0 auto;
   width: 100%;
   background: #9546bd;
@@ -85,4 +84,9 @@ h6 {
   text-align: center;
   min-height: 100%;
   position: bottom;
+}
+
+.pageContent {
+  padding: 10px;
+  flex-grow: 1;
 }

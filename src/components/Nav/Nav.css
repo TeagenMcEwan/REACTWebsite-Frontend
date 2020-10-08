@@ -1,5 +1,19 @@
-Nav {
-  margin: 50px;
-  font: white;
+nav {
+  padding: 20px;
+  color: white;
   background: #f2377d;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+nav a:hover {
+  /* font-weight: bold; */
+  transform: scale(1.3);
 }
