@@ -65,7 +65,7 @@ function EditProjectForm() {
           // console.log(response);
         })
         .catch((error) => {
-          alert("you have not completed the form");
+          alert("There is an error in your request");
         });
     }
   };

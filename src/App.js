@@ -16,8 +16,7 @@ export default function App() {
     <Router>
       <div>
         <img
-          src="Logo.png"
-          // alt="waSportsStars Logo"
+          src="./components/Logo/Logo.png"
           style={{ width: "250px", height: "200px" }}
         ></img>
         <Nav />

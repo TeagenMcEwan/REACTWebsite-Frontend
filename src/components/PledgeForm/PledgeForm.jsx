@@ -37,7 +37,9 @@ function PledgeForm({ projectId }) {
     e.preventDefault();
     postData()
       .then((response) => {
-        history.push("/");
+        // history.push(`/project/${projectId}`);
+        alert("Thanks for your pledge!");
+        window.location.reload();
         // console.log(response);
       })
       .catch((error) => {
