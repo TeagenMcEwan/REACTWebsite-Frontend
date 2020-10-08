@@ -1,38 +1,54 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, useHistory, Link } from "react-router-dom";
 
-function CreateProjectForm() {
+function EditProjectForm() {
   //variables
-  const [credentials, setCredentials] = useState({
+  const [projectData, setProjectData] = useState({
     title: "",
     description: "",
     goal: "",
-    image:
-      "https://cdn.vox-cdn.com/thumbor/z60rSxAiFBIpiEvgtEfmOBYD6h4=/0x0:600x378/1200x800/filters:focal(252x141:348x237)/cdn.vox-cdn.com/uploads/chorus_image/image/64360364/695293459.0.jpg",
-    is_open: "true",
-    date_created: "2020-09-09T20:31:00Z",
+    image: "",
+    is_open: true,
+    //   date_created: "2020-09-09T20:31:00Z",
   });
+  const { id } = useParams();
+
   const history = useHistory();
   const token = window.localStorage.getItem("token");
 
   //methods
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}projects/${id}`)
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        setProjectData(data);
+      });
+  }, []);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setCredentials((prevCredentials) => ({
-      ...prevCredentials,
+    setProjectData((data) => ({
+      ...data,
       [id]: value,
     }));
   };
 
   const postData = async () => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}projects/`, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `token ${token}`,
-      },
-      body: JSON.stringify(credentials),
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_API_URL}projects/${id}`,
+      {
+        method: "put",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `token ${token}`,
+        },
+        body: JSON.stringify({
+          title: projectData.title,
+        }),
+      }
+    );
     return response.json();
   };
 
@@ -59,9 +75,9 @@ function CreateProjectForm() {
         <input
           type="text"
           id="title"
-          placeholder="Enter Project Title"
+          placeholder="Project Title"
           onChange={handleChange}
-          value={credentials.title}
+          value={projectData.title}
         />
       </div>
       <div>
@@ -71,7 +87,7 @@ function CreateProjectForm() {
           id="description"
           placeholder="Description"
           onChange={handleChange}
-          value={credentials.description}
+          value={projectData.description}
         />
       </div>
       <div>
@@ -81,45 +97,35 @@ function CreateProjectForm() {
           id="goal"
           placeholder="Goal"
           onChange={handleChange}
-          value={credentials.goal}
+          value={projectData.goal}
         />
       </div>
       <div>
         <label htmlFor="image">Image:</label>
         <input
-          type="image"
+          type="text"
           id="image"
           placeholder="Image"
           onChange={handleChange}
-          value={credentials.image}
+          value={projectData.image}
         />
       </div>
       <div>
         <label htmlFor="is_open">Project Open:</label>
         <input
-          type="is_open"
+          type="checkbox"
           id="is_open"
           placeholder="is_open"
           onChange={handleChange}
-          value={credentials.is_open}
-        />
-      </div>
-      <div>
-        <label htmlFor="date_created">Date Created:</label>
-        <input
-          type="date_created"
-          id="date_created"
-          placeholder="date_created"
-          onChange={handleChange}
-          value={credentials.date_created}
+          value={projectData.is_open}
         />
       </div>
 
       <button type="submit" onClick={handleSubmit}>
-        Create Project
+        Save
       </button>
     </form>
   );
 }
 
-export default CreateProjectForm;
+export default EditProjectForm;

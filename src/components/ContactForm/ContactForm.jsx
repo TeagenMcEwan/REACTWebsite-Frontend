@@ -6,6 +6,8 @@ function ContactForm() {
   const [credentials, setCredentials] = useState({
     first_name: "",
     surname: "",
+    email: "",
+    phone: "",
   });
   const history = useHistory();
 
@@ -62,6 +64,34 @@ function ContactForm() {
           id="surname"
           placeholder="Surname"
           onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          placeholder="email"
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="number">Phone Number:</label>
+        <input
+          type="text"
+          id="number"
+          placeholder="Number"
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <label htmlFor="description">Description:</label>
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          onChange={handleChange}
+          value={credentials.description}
         />
       </div>
       <button type="submit" onClick={handleSubmit}>

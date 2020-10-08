@@ -40,7 +40,7 @@
 body {
   background: black;
   color: white;
-  padding: 50px;
+  /* padding: 50px; */
 }
 
 #project-list {
@@ -49,16 +49,40 @@ body {
   column-gap: 30px;
   row-gap: 30px;
   background-color: black;
-  /* text: white; */
+}
 
-  #form {
-    margin: 50px;
-    padding: 50px;
-  }
+#form {
+  margin: 50px;
+  padding: 50px;
 }
 
 Nav {
-  margin: 50px;
+  /* margin: 50px; */
   font: white;
   background: #f2377d;
+  justify-content: space-between;
+  text-align: center;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  background: #9546bd;
+  padding: 10px;
+  font-size: 15px;
+  /* color: black; */
+  text-align: center;
+  min-height: 100%;
+  position: bottom;
+}
+
+h6 {
+  margin: 0 auto;
+  width: 100%;
+  background: #eea63f;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  min-height: 100%;
+  position: bottom;
 }

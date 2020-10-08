@@ -5,9 +5,11 @@ import Home from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
 import CreateProject from "./components/CreateProjectForm/CreateProjectForm";
+// import EditProject from "./components/EditProjectForm/EditProjectForm";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
 import "./App.css";
+import EditProject from "./pages/EditProject";
 
 export default function App() {
   return (
@@ -28,6 +30,9 @@ export default function App() {
           <Route path="/about">
             <AboutPage />
           </Route>
+          <Route path="/editproject/:id">
+            <EditProject />
+          </Route>
           <Route path="/project/:id">
             <ProjectPage />
           </Route>
@@ -41,6 +46,9 @@ export default function App() {
             <LoginPage />
           </Route>
         </Switch>
+
+        <h6>Terms & Conditions</h6>
+        <footer>Teagen McEwan (c) Copyright 2020</footer>
       </div>
     </Router>
   );
