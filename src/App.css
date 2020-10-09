@@ -26,6 +26,7 @@ body {
 form {
   margin: 30px auto;
   width: 90%;
+  justify-content: center;
 }
 
 .form-item {
