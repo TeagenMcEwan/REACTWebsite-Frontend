@@ -25,7 +25,6 @@ function Nav(props) {
       <Link to="/contact">Contact</Link>
       <Link to="/CreateProjectForm">Create Project</Link>
       {!loggedIn ? (
-        // <Link className="Login">Login</Link>
         <Link to="/login">Login</Link>
       ) : (
         <Link onClick={logout}>Logout</Link>
@@ -33,36 +32,5 @@ function Nav(props) {
     </nav>
   );
 }
-
-// function Nav(props) {
-//     const { image }= props;
-//     const loggedIn = true;
-//     const logout = true;
-
-//     return (
-//         <nav>
-
-//         <div>
-//         <Link to="/">Home</Link>
-//         <Link to="/">About</Link>
-//         <Link to="/project">Project</Link>
-//         <Link to="/">Contact</Link>
-
-//         {!loggedIn ? (
-//             <div>
-//                 <Link >Login</Link>
-//             </div>
-//         ) : (
-//           <Link onClick={logout}>Logout</Link>
-//         )}
-
-//         <button className="Button">
-//             <Link to="/login">Login</Link>
-//         </button>
-//         </div>
-
-//         </nav>
-//     );
-// }
 
 export default Nav;

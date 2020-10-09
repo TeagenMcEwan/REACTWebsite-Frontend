@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import PledgeForm from "../components/PledgeForm/PledgeForm";
-// import Logo from "./components/Logo/Logo";
-// import image from "../image.png";
-// import { oneProject } from "../data";
 
 function ProjectPage() {
   const [projectData, setProjectData] = useState({
@@ -80,5 +77,3 @@ function ProjectPage() {
 }
 
 export default ProjectPage;
-
-// ProjectImage needs to be here!!

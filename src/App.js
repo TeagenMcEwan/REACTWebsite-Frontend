@@ -5,7 +5,6 @@ import Home from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectPage from "./pages/ProjectPage";
 import CreateProject from "./components/CreateProjectForm/CreateProjectForm";
-// import EditProject from "./components/EditProjectForm/EditProjectForm";
 import ContactPage from "./pages/ContactPage";
 import LoginPage from "./pages/LoginPage";
 import "./App.css";
