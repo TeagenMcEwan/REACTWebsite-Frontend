@@ -17,7 +17,8 @@ function AboutPage() {
           sports is a very niche area and there is only a certain amount of
           places up for selection for elite athletes to represent their state,
           country or on an international platform.
-          <br>
+          </p>
+          <p>
             Many elite athletes train over 20-35 hours per week to be the
             champion’s in their fields and ambassadors for WA/Australia, so
             trying to obtain and retain employment to financially aid the number
@@ -25,8 +26,8 @@ function AboutPage() {
             required to meet minimum requirements for sate, national and
             international selection is extremely difficult as they have to work
             around their sport training and competition commitments.
-          </br>
-          <br>
+          </p>
+          <p>
             Every year more and more pressure is put on organisations to provide
             sponsorship or financial aid to elite athletes to assist them in
             being able to represent WA and/or Australia. waSportsStars will help
@@ -34,8 +35,8 @@ function AboutPage() {
             each year, and will allow the community, individuals and
             organisations to fund the individual athlete or team that best suits
             and aligns to their KPIs and values.
-          </br>
-          <br>
+          </p>
+          <p>
             waSportsStars will also allow WA elite athletes the opportunity to
             showcase their talents and selections for financial aid to assist
             them in representing WA or Australia on state, national or
@@ -43,8 +44,8 @@ function AboutPage() {
             strict requirements on where the individual athlete or team can
             spend the funds to ensure they do not miss out on these ‘once in a
             lifetime’ opportunities. For example travel, accommodation,
-            competition/entry fees and uniforms.{" "}
-          </br>
+            competition/entry fees and uniforms.
+          </p>
         </p>
       </div>
     </>

@@ -9,6 +9,7 @@
   width: 100%;
   height: 50%;
   object-fit: cover;
+  justify-content: center;
 }
 
 .project-card h1 {
