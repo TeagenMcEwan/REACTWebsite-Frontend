@@ -44,13 +44,14 @@ function ProjectPage() {
     <div>
       <img src={projectData.image} />
       <h2>{projectData.title}</h2>
-      <h2>{projectData.owner}</h2>
-      <h2>{projectData.description}</h2>
-      <h3>
+      <h3>{projectData.owner}</h3>
+      <h3>{projectData.goal}</h3>
+      <h4>{projectData.description}</h4>
+      <h4>
         Created at:{" "}
         {projectData.date_created ? projectData.date_created.substr(0, 10) : ""}
-      </h3>
-      <h3>{`Status: ${projectData.is_open}`}</h3>
+      </h4>
+      <h4>{`Status: ${projectData.is_open}`}</h4>
       {projectData.pledges.length > 0 ? <h3>Pledges:</h3> : null}
       <ul>
         {projectData.pledges.map((pledgeData, key) => {
