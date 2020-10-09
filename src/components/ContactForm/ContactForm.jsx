@@ -20,20 +20,6 @@ function ContactForm() {
     }));
   };
 
-  //   const postData = async () => {
-  //     const response = await fetch(
-  //       `${process.env.REACT_APP_API_URL}api-token-auth/`,
-  //       {
-  //         method: "post",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(credentials),
-  //       }
-  //     );
-  //     return response.json();
-  //   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
   };
