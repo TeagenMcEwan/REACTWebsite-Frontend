@@ -48,6 +48,7 @@ function ProjectPage() {
       <img src={projectData.image} />
       <h2>{projectData.title}</h2>
       <h2>{projectData.owner}</h2>
+      <h2>{projectData.description}</h2>
       <h3>
         Created at:{" "}
         {projectData.date_created ? projectData.date_created.substr(0, 10) : ""}
