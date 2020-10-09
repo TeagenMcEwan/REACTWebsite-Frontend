@@ -1,5 +1,10 @@
 import React from "react";
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+  rel="stylesheet"
+></link>;
+
 function AboutPage() {
   // return <LoginForm />;
 

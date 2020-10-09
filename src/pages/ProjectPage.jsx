@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import PledgeForm from "../components/PledgeForm/PledgeForm";
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+  rel="stylesheet"
+></link>;
+
 function ProjectPage() {
   const [projectData, setProjectData] = useState({
     loading: true,

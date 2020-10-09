@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { allProjects } from "../data";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+  rel="stylesheet"
+></link>;
+
 function HomePage() {
   //variables
   const [projectList, setProjectList] = useState([]);
