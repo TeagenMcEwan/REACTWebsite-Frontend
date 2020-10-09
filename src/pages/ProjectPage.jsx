@@ -45,7 +45,7 @@ function ProjectPage() {
       <img src={projectData.image} />
       <h2>{projectData.title}</h2>
       <h3>{projectData.owner}</h3>
-      <h3>{projectData.goal}</h3>
+      <h3>${projectData.goal}</h3>
       <h4>{projectData.description}</h4>
       <h4>
         Created at:{" "}
